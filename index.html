@@ -2,58 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>El Radar de Móstoles</title>
+    <title>Radar de Móstoles - Museo</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   </head>
 
   <body>
     <a-scene background="color: #222">
 
-      <!-- ASSETS -->
       <a-assets>
         <a-asset-item id="museo" src="museo.glb"></a-asset-item>
-        <a-asset-item id="poster1" src="poster1.glb"></a-asset-item>
         <a-asset-item id="pulgon" src="pulgon_vertical.glb"></a-asset-item>
       </a-assets>
 
-      <!-- MUSEO (ENTIDAD PADRE) -->
-      <a-entity gltf-model="#museo" position="0 0 0" scale="1 1 1">
+      <!-- MUSEO (PADRE) -->
+      <!-- Ajusta aquí el tamaño del museo: 10, 20, 50, 100... -->
+      <a-entity id="museoRoot" gltf-model="#museo" position="0 0 0" scale="50 50 50">
 
-        <!-- POSTER -->
-        <a-entity
-          gltf-model="#poster1"
-          position="0 1.6 -2"
-          scale="0.3 0.3 0.3"
-          rotation="0 180 0">
+        <!-- PULGÓN 1 (HIJO DEL MUSEO) -->
+        <a-entity gltf-model="#pulgon"
+                  scale="0.09 0.09 0.09"
+                  position="-0.04 0.01 -0.02"
+                  rotation="0 135 0">
         </a-entity>
 
-        <!-- PULGÓN 1 -->
-        <a-entity
-          gltf-model="#pulgon"
-          position="-2 0.15 -1.05"
-          scale="0.09 0.09 0.09"
-          rotation="0 135 0">
-        </a-entity>
-
-        <!-- PULGÓN 2 -->
-        <a-entity
-          gltf-model="#pulgon"
-          position="-1.25 0.15 -1.05"
-          scale="0.09 0.09 0.09"
-          rotation="0 115 0">
+        <!-- PULGÓN 2 (HIJO DEL MUSEO) -->
+        <a-entity gltf-model="#pulgon"
+                  scale="0.09 0.09 0.09"
+                  position="-0.025 0.01 -0.02"
+                  rotation="0 115 0">
         </a-entity>
 
       </a-entity>
 
-      <!-- CÁMARA -->
-      <a-entity position="0 1.6 0">
+      <!-- CÁMARA (altura humana) -->
+      <a-entity position="0 1.6 0.5">
         <a-camera wasd-controls look-controls>
           <a-cursor></a-cursor>
         </a-camera>
       </a-entity>
 
       <!-- LUCES -->
-      <a-entity light="type: ambient; intensity: 0.7"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.8"></a-entity>
       <a-entity light="type: directional; intensity: 0.6" position="1 4 1"></a-entity>
 
     </a-scene>
