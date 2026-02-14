@@ -12,7 +12,7 @@
       <a-assets>
         <a-asset-item id="museo" src="museo.glb"></a-asset-item>
         <a-asset-item id="pulgon" src="pulgon_vertical.glb"></a-asset-item>
-        <a-asset-item id="poster1" src="poster1.jpg"></a-asset-item>
+        <img id="poster1" src="poster1.jpg">
       
       </a-assets>
 
@@ -27,7 +27,7 @@
       </a-entity>
 
       <!-- Modelo 3D colocado dentro del museo -->
-      <a-entity gltf-model="#poster1" scale="1.5 1 1" position="-1.6 3.75 -3.05" rotation="90 0 0"></a-entity>
+      <a-plane position="-1.6 3.75 -3.05" rotation="0 0 0"  width="2"  height="1.2"  material="src: #poster1; side: double;"> </a-plane>
       <a-entity gltf-model="#pulgon" scale="0.09 0.09 0.09" position="-2 0.16 -1.05" rotation="0 135 0"></a-entity>
       <a-entity gltf-model="#pulgon" scale="0.09 0.09 0.09" position="-1.25 0.16 -1.05" rotation="0 115 0"></a-entity>
      
