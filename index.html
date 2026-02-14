@@ -9,11 +9,12 @@
     <a-scene background="color: #222">
       <a-assets>
         <a-asset-item id="museo" src="museo.glb"></a-asset-item>
-       
+        <a-asset-item id="poster1.glb" src="poster1.glb"></a-asset-item>
       </a-assets>
 
       <!-- Museo correctamente escalado y ubicado -->
       <a-entity gltf-model="#museo" scale="100 100 100" position="0 0 0"></a-entity>
+      <a-entity gltf-model="#poster1" scale="1 1 1" position="0 1.5 -2" rotation="0 0 0"> </a-entity>
 
       <!-- Cámara dentro del museo -->
       <a-entity position="0 0.15 0">
