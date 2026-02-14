@@ -5,54 +5,56 @@
     <title>El Radar de Móstoles</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   </head>
+
   <body>
     <a-scene background="color: #222">
-      
+
+      <!-- ASSETS -->
       <a-assets>
         <a-asset-item id="museo" src="museo.glb"></a-asset-item>
         <a-asset-item id="poster1" src="poster1.glb"></a-asset-item>
         <a-asset-item id="pulgon" src="pulgon_vertical.glb"></a-asset-item>
       </a-assets>
 
-      <!-- Museo (ENTIDAD PADRE) -->
-      <a-entity gltf-model="#museo" scale="250 100 250" position="0 0 0">
+      <!-- MUSEO (ENTIDAD PADRE) -->
+      <a-entity gltf-model="#museo" position="0 0 0" scale="1 1 1">
 
-        <!-- Póster dentro del museo -->
-        <a-entity 
+        <!-- POSTER -->
+        <a-entity
           gltf-model="#poster1"
-          scale="10 10 10"
-          position="0 1.5 -2"
-          rotation="0 0 0">
+          position="0 1.6 -2"
+          scale="0.3 0.3 0.3"
+          rotation="0 180 0">
         </a-entity>
 
-        <!-- Pulgón 1 -->
-        <a-entity 
+        <!-- PULGÓN 1 -->
+        <a-entity
           gltf-model="#pulgon"
+          position="-2 0.15 -1.05"
           scale="0.09 0.09 0.09"
-          position="-2 0.16 -1.05"
           rotation="0 135 0">
         </a-entity>
 
-        <!-- Pulgón 2 -->
-        <a-entity 
+        <!-- PULGÓN 2 -->
+        <a-entity
           gltf-model="#pulgon"
+          position="-1.25 0.15 -1.05"
           scale="0.09 0.09 0.09"
-          position="-1.25 0.16 -1.05"
           rotation="0 115 0">
         </a-entity>
 
       </a-entity>
 
-      <!-- Cámara -->
-      <a-entity position="0 0.15 0">
+      <!-- CÁMARA -->
+      <a-entity position="0 1.6 0">
         <a-camera wasd-controls look-controls>
           <a-cursor></a-cursor>
         </a-camera>
       </a-entity>
 
-      <!-- Luces -->
+      <!-- LUCES -->
       <a-entity light="type: ambient; intensity: 0.7"></a-entity>
-      <a-entity light="type: directional; intensity: 0.5" position="1 4 1"></a-entity>
+      <a-entity light="type: directional; intensity: 0.6" position="1 4 1"></a-entity>
 
     </a-scene>
   </body>
