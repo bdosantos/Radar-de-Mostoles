@@ -56,7 +56,18 @@
       <a-plane position="0 2 6" rotation="0 180 0"  width="2"  height="3.25"  material="src: #poster3; side: double;"> </a-plane>
       <a-entity gltf-model="#pulgon" scale="0.09 0.09 0.09" position="-2 0.16 -1.05" rotation="0 135 0"></a-entity>
       <a-entity gltf-model="#pulgon" scale="0.09 0.09 0.09" position="-1.25 0.16 -1.05" rotation="0 115 0"></a-entity>
-      <a-entity gltf-model="#satelite" scale="0.09 0.09 0.09" position="-1.25 3 -1.05" rotation="0 0 0"></a-entity>
+    
+       <a-entity gltf-model="#satelite"
+          scale="0.09 0.09 0.09"
+          position="-2 3 -6"
+          rotation="0 0 0"
+          animation="property: position;
+                     to: 6 3 2;
+                     dur: 6000;
+                     dir: alternate;
+                     loop: true;
+                     easing: easeInOutSine">
+        </a-entity>
       <a-entity gltf-model="#satelite"
           scale="0.09 0.09 0.09"
           position="2 3 -6"
